@@ -6,13 +6,16 @@ document.getElementById('deposit-btn').addEventListener('click', function(){
     const NewDepositAmountString = depositField.value;
     const NewDepositAmount = parseFloat(NewDepositAmountString);
 
+    // for clearing 
     depositField.value = '';
 
+    // if anyone give value other than number or submit null value 
     if(isNaN(NewDepositAmount)){
         alert('please provide a valid number');
         return;
     }
 
+    // if user give minus value
     if(NewDepositAmount<0){
         alert('please provide a valid number');
         return;
